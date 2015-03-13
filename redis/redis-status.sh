@@ -61,127 +61,127 @@ function databse_detect {
 
 case $METRIC in
     'redis_version')
-        cat $CACHE | grep "redis_version:" | cut -d':' -f2
+        grep "redis_version:" $CACHE | cut -d':' -f2
         ;;            
     'redis_git_sha1')
-        cat $CACHE | grep "redis_git_sha1:" | cut -d':' -f2
+        grep "redis_git_sha1:" $CACHE | cut -d':' -f2
         ;;
     'redis_git_dirty')
-        cat $CACHE | grep "redis_git_dirty:" | cut -d':' -f2
+        grep "redis_git_dirty:" $CACHE | cut -d':' -f2
         ;;
     'redis_mode')
-        cat $CACHE | grep "redis_mode:" | cut -d':' -f2
+        grep "redis_mode:" $CACHE | cut -d':' -f2
         ;;
     'arch_bits')
-        cat $CACHE | grep "arch_bits:" | cut -d':' -f2
+        grep "arch_bits:" $CACHE | cut -d':' -f2
         ;;
     'multiplexing_api')
-        cat $CACHE | grep "multiplexing_api:" | cut -d':' -f2
+        grep "multiplexing_api:" $CACHE | cut -d':' -f2
         ;;
     'gcc_version')
-        cat $CACHE | grep "gcc_version:" | cut -d':' -f2
+        grep "gcc_version:" $CACHE | cut -d':' -f2
         ;;
     'uptime_in_seconds')
-        cat $CACHE | grep "uptime_in_seconds:" | cut -d':' -f2
+        grep "uptime_in_seconds:" $CACHE | cut -d':' -f2
         ;;
     'lru_clock')
-        cat $CACHE | grep "lru_clock:" | cut -d':' -f2
+        grep "lru_clock:" $CACHE | cut -d':' -f2
         ;;            
     'connected_clients')
-        cat $CACHE | grep "connected_clients:" | cut -d':' -f2
+        grep "connected_clients:" $CACHE | cut -d':' -f2
         ;;
     'client_longest_output_list')
-        cat $CACHE | grep "client_longest_output_list:" | cut -d':' -f2
+        grep "client_longest_output_list:" $CACHE | cut -d':' -f2
         ;;
     'client_biggest_input_buf')
-        cat $CACHE | grep "client_biggest_input_buf:" | cut -d':' -f2
+        grep "client_biggest_input_buf:" $CACHE | cut -d':' -f2
         ;;
     'used_memory')
-        cat $CACHE | grep "used_memory:" | cut -d':' -f2
+        grep "used_memory:" $CACHE | cut -d':' -f2
         ;;
     'used_memory_peak')
-        cat $CACHE | grep "used_memory_peak:" | cut -d':' -f2
+        grep "used_memory_peak:" $CACHE | cut -d':' -f2
         ;;        
     'mem_fragmentation_ratio')
-        cat $CACHE | grep "mem_fragmentation_ratio:" | cut -d':' -f2
+        grep "mem_fragmentation_ratio:" $CACHE | cut -d':' -f2
         ;;
     'loading')
-        cat $CACHE | grep "loading:" | cut -d':' -f2
+        grep "loading:" $CACHE | cut -d':' -f2
         ;;            
     'rdb_changes_since_last_save')
-        cat $CACHE | grep "rdb_changes_since_last_save:" | cut -d':' -f2
+        grep "rdb_changes_since_last_save:" $CACHE | cut -d':' -f2
         ;;
     'rdb_bgsave_in_progress')
-        cat $CACHE | grep "rdb_bgsave_in_progress:" | cut -d':' -f2
+        grep "rdb_bgsave_in_progress:" $CACHE | cut -d':' -f2
         ;;
     'aof_rewrite_in_progress')
-        cat $CACHE | grep "aof_rewrite_in_progress:" | cut -d':' -f2
+        grep "aof_rewrite_in_progress:" $CACHE | cut -d':' -f2
         ;;
     'aof_enabled')
-        cat $CACHE | grep "aof_enabled:" | cut -d':' -f2
+        grep "aof_enabled:" $CACHE | cut -d':' -f2
         ;;
     'aof_rewrite_scheduled')
-        cat $CACHE | grep "aof_rewrite_scheduled:" | cut -d':' -f2
+        grep "aof_rewrite_scheduled:" $CACHE | cut -d':' -f2
         ;;
     'total_connections_received')
-        cat $CACHE | grep "total_connections_received:" | cut -d':' -f2
+        grep "total_connections_received:" $CACHE | cut -d':' -f2
         ;;            
     'total_commands_processed')
-        cat $CACHE | grep "total_commands_processed:" | cut -d':' -f2
+        grep "total_commands_processed:" $CACHE | cut -d':' -f2
         ;;
     'instantaneous_ops_per_sec')
-        cat $CACHE | grep "instantaneous_ops_per_sec:" | cut -d':' -f2
+        grep "instantaneous_ops_per_sec:" $CACHE | cut -d':' -f2
         ;;
     'rejected_connections')
-        cat $CACHE | grep "rejected_connections:" | cut -d':' -f2
+        grep "rejected_connections:" $CACHE | cut -d':' -f2
         ;;
     'expired_keys')
-        cat $CACHE | grep "expired_keys:" | cut -d':' -f2
+        grep "expired_keys:" $CACHE | cut -d':' -f2
         ;;
     'evicted_keys')
-        cat $CACHE | grep "evicted_keys:" | cut -d':' -f2
+        grep "evicted_keys:" $CACHE | cut -d':' -f2
         ;;
     'keyspace_hits')
-        cat $CACHE | grep "keyspace_hits:" | cut -d':' -f2
+        grep "keyspace_hits:" $CACHE | cut -d':' -f2
         ;;        
     'keyspace_misses')
-        cat $CACHE | grep "keyspace_misses:" | cut -d':' -f2
+        grep "keyspace_misses:" $CACHE | cut -d':' -f2
         ;;
     'pubsub_channels')
-        cat $CACHE | grep "pubsub_channels:" | cut -d':' -f2
+        grep "pubsub_channels:" $CACHE | cut -d':' -f2
         ;;        
     'pubsub_patterns')
-        cat $CACHE | grep "pubsub_patterns:" | cut -d':' -f2
+        grep "pubsub_patterns:" $CACHE | cut -d':' -f2
         ;;             
     'latest_fork_usec')
-        cat $CACHE | grep "latest_fork_usec:" | cut -d':' -f2
+        grep "latest_fork_usec:" $CACHE | cut -d':' -f2
         ;; 
     'role')
-        cat $CACHE | grep "role:" | cut -d':' -f2
+        grep "role:" $CACHE | cut -d':' -f2
         ;;
     'connected_slaves')
-        cat $CACHE | grep "connected_slaves:" | cut -d':' -f2
+        grep "connected_slaves:" $CACHE | cut -d':' -f2
         ;;          
     'used_cpu_sys')
-        cat $CACHE | grep "used_cpu_sys:" | cut -d':' -f2
+        grep "used_cpu_sys:" $CACHE | cut -d':' -f2
         ;;  
     'used_cpu_user')
-        cat $CACHE | grep "used_cpu_user:" | cut -d':' -f2
+        grep "used_cpu_user:" $CACHE | cut -d':' -f2
         ;;
     'used_cpu_sys_children')
-        cat $CACHE | grep "used_cpu_sys_children:" | cut -d':' -f2
+        grep "used_cpu_sys_children:" $CACHE | cut -d':' -f2
         ;;             
     'used_cpu_user_children')
-        cat $CACHE | grep "used_cpu_user_children:" | cut -d':' -f2
+        grep "used_cpu_user_children:" $CACHE | cut -d':' -f2
         ;; 
     'key_space_db_keys')
-        cat $CACHE | grep $DB:|cut -d':' -f2|awk -F, '{print $1}'|cut -d'=' -f2 
+        grep "$DB:" $CACHE |cut -d':' -f2|awk -F, '{print $1}'|cut -d'=' -f2 
         ;;        
     'key_space_db_expires')
-        cat $CACHE | grep $DB:|cut -d':' -f2|awk -F, '{print $2}'|cut -d'=' -f2 
+        grep "$DB:" $CACHE |cut -d':' -f2|awk -F, '{print $2}'|cut -d'=' -f2 
         ;;
     'list_key_space_db')
-        LIST_DATABSE=`cat $CACHE | grep '^db.:'|cut -d: -f1`
+        LIST_DATABSE=`grep '^db.:' $CACHE | cut -d: -f1`
         databse_detect
         ;;                                                     
     *)   
